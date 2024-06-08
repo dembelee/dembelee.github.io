@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Website</title>
+    <link rel="stylesheet" href="../dist/css/main.min.css">
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="pl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forest Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/dist/css/main.min.css">
+        <script src="https://kit.fontawesome.com/ce60aed5a5.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div class="nav2">
+            <a href="#" class="top__icon"><i class="fa-solid fa-tree"></i>Forest</a>
+            <button class="burger__btn">
+                <div class="burger__btn-box">
+                    <div class="burger__btn-bars"></div>
+                </div>
+            </button>
+            <button class="close__btn">
+                <i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <nav class="nav">
+            <a href="#" class="nav__icon"><i class="fa-solid fa-tree"></i>Forest</a>
+            <div class="nav__box">
+                <a href="/index.html" class="nav__box-link">Home</a>
+                <a href="#" class="nav__box-link">O nas</a>
+                <a href="#offers" class="nav__box-link">Oferta</a>
+                <a href="/contact.html" class="nav__box-link">Kontakt</a>
+            </div>
+            </button>
+        </nav>
+
+        <header class="header">
+            <div class="header__box">
+                <p class="header__box-text">Forest Group</p>
+                <h1 class="header__box-title">Najpiękniejszy park w Twojej okolicy!</h1>
+            </div>
+            <div class="bg-shadow"></div>
+        </header>
+
+        <main class="main">
+
+            <section class="offers" id="offers">
+                <h2 class="section-title">oferta</h2>
+                <h3 class="section-info">Wybierz jedną z naszych wspaniałych ofert!</h3>
+                <div class="offers__boxes">
+                    <div class="offers__boxes-box">
+                        <h3 class="offers__boxes-title">Demo</h3>
+                        <p class="offers__boxes-price">$0</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li class="no-pack"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                            <li class="no-pack"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                            <li class="no-pack"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                        </ul>
+                        <button class="offers__boxes-btn">Wybierz</button>
+                    </div>
+                    <div class="offers__boxes-box">
+                        <h3 class="offers__boxes-title">Standard</h3>
+                        <p class="offers__boxes-price">$99</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li class="no-pack"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                            <li class="no-pack"><i class="fas fa-minus"></i>opcja poza pakietem</li>
+                        </ul>
+                        <button class="offers__boxes-btn offers__boxes-btn--diff">Wybierz</button>
+                    </div>
+                    <div class="offers__boxes-box">
+                        <h3 class="offers__boxes-title">Premium</h3>
+                        <p class="offers__boxes-price">$299</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                            <li><i class="fas fa-check"></i>opcja w pakiecie</li>
+                        </ul>
+                        <button class="offers__boxes-btn">Wybierz</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="summary">
+
+                <div class="summary__icon"><a href="#"><i class="fa-solid fa-tree"></i>Forest</a></div>
+
+                <div class="summary__box">
+                    <div class="summary__box-top" onclick="showList(0, 'first-arrow')">
+                        <h2 class="summary__box-title">O nas</h2>
+                        <button class="summary__box-btn first-arrow"> <i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                    <div class="summary__box-bottom" id="0">
+                        <a>Historia</a>
+                        <a>Parki</a>
+                        <a>Opinie</a>
+                    </div>
+                </div>
+                <div class="summary__box">
+                    <div class="summary__box-top" onclick="showList(1, 'second-arrow')">
+                        <h2 class="summary__box-title">Nasza firma</h2>
+                        <button class="summary__box-btn"> <i class="fa-solid fa-angle-down second-arrow"></i></button>
+                    </div>
+                    <div class="summary__box-bottom" id="1">
+                        <a>Praca</a>
+                        <a>Kadry</a>
+                        <a>Zarząd</a>
+                    </div>
+                </div>
+                <div class="summary__box">
+                    <div class="summary__box-top" onclick="showList(2,'third-arrow')">
+                        <h2 class="summary__box-title">Dokumenty</h2>
+                        <button class="summary__box-btn"> <i class="fa-solid fa-angle-down third-arrow"></i></button>
+                    </div>
+                    <div class="summary__box-bottom" id="2">
+                        <a>Wnioski</a>
+                        <a>Rezerwacje</a>
+                    </div>
+                </div>
+
+
+                <div class="summary__box--two">
+                    <div class="summary__box--text">
+                        <h2 class="summary-title">O nas</h2>
+                        <div class="summary__box-mini">
+                            <a href="#">Historia</a>
+                            <a href="#">Parki</a>
+                            <a href="#">Opinie</a>
+                        </div>
+                    </div>
+                    <div class="summary__box--text">
+                        <h2 class="summary-title">Nasza firma</h2>
+                        <div class="summary__box-mini">
+                            <a href="#">Praca</a>
+                            <a href="#">Kadry</a>
+                            <a href="#">Zarząd</a>
+                        </div>
+                    </div>
+                    <div class="summary__box--text">
+                        <h2 class="summary-title">Dokumenty</h2>
+                        <div class="summary__box-mini">
+                            <a href="#">Wnioski</a>
+                            <a href="#">Rezerwacje</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <hr>
+
+        <footer class="footer">&copy;<span class="footer__year"></span> Forest Group Company Ltd.</footer>
+
+        <script src="/dist/js/main.min.js"></script>
+    </body>
+
+    </html>
+
+</body>
+
+</html>
