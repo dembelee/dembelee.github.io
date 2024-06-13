@@ -42,6 +42,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
+	min-height: 100vh;
 	font-family: Montserrat, sans-serif;
 	background-color: #fff;
 }
@@ -165,6 +166,10 @@ hr {
 	flex-direction: column;
 	height: 100%;
 }
+.nav__box .link-active {
+	background-color: #000;
+	color: #fff;
+}
 .nav__box a {
 	padding: 0.5em;
 	width: 100%;
@@ -175,13 +180,6 @@ hr {
 }
 .nav__box a:first-child {
 	margin-top: 5em;
-}
-.nav__box a:nth-child(2) {
-	color: #fff;
-	background-color: #000;
-}
-.nav__box a:nth-child(2):hover {
-	color: #929292;
 }
 .nav__box a:hover {
 	color: #fff;
@@ -287,6 +285,9 @@ main .hero-img-text {
 	color: #fff;
 	z-index: 5;
 }
+main .hero-img .bg-shadow {
+	background-color: rgba(0, 15, 0, 0.5);
+}
 main .offers {
 	display: flex;
 	align-items: center;
@@ -384,46 +385,118 @@ main .offers__link:before {
 main .offers__link:hover:before {
 	width: 100%;
 }
-main .contact {
-	padding: 6em 4em;
+main .offers__case {
+	padding: 3em 2em;
+}
+main .offers__case-top {
+	margin-bottom: 1.5em;
+	padding: 1em;
+	border: 1px solid #000;
+	overflow: hidden;
+}
+main .offers__case-top img {
+	width: 100%;
+	transition: scale 0.5s;
+}
+main .offers__case-top img:hover {
+	scale: 1.1;
+}
+main .offers__case-bottom {
+	padding: 1em;
+	text-align: center;
+}
+main .offers__case-title {
+	margin-bottom: 1em;
+	font-size: 1.8rem;
+	text-align: center;
+	text-transform: capitalize;
+}
+main .offers__case-text {
+	font-size: 1.4rem;
 }
 main .contact .section-title {
+	margin: 3em 0;
 	font-size: 2.8rem;
 }
-main .contact .contact__box {
-	align-items: center;
+main .contact .icons__box {
+	margin: 4em auto;
 }
-main .contact .contact__box,
-main .contact .contact__box-form {
+main .contact__icons {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+	padding: 0 4em;
+}
+main .contact__icons .icons__minibox {
+	display: flex;
+	align-items: center;
+	margin: 1em 0;
+}
+main .contact__icons i {
+	margin: 0 1em;
+	font-size: 3.4rem;
+}
+main .contact__icons .fa-facebook,
+main .contact__icons .fa-instagram {
+	cursor: pointer;
+	transition: color 0.3s;
+}
+main .contact__icons .fa-facebook:hover,
+main .contact__icons .fa-instagram:hover {
+	color: #149449;
+}
+main .contact__icons p {
+	margin: 1.4em;
+	font-size: 1.4rem;
+}
+main .contact__box {
+	position: relative;
+	align-items: center;
+	padding: 6em 4em;
+}
+main .contact__box,
+main .contact__box-form {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
 }
-main .contact .contact__box-form {
+main .contact__box-form {
 	align-items: start;
 }
-main .contact .contact__box-form label {
+main .contact__box-form label {
+	margin-bottom: 0.5em;
 	font-size: 1.6rem;
 }
-main .contact .contact__box-form input,
-main .contact .contact__box-form textarea {
-	margin-bottom: 2em;
+main .contact__box-form input,
+main .contact__box-form textarea {
 	padding: 0.5em;
 	width: 100%;
 	border: 2px solid #f2f2f2;
 	border-radius: 2px;
 }
-main .contact .contact__box-form input:focus,
-main .contact .contact__box-form textarea:focus {
+main .contact__box-form input:focus,
+main .contact__box-form textarea:focus {
 	outline: none;
 	border: 2px solid #000;
 }
-main .contact .contact__box-form textarea {
+main .contact__box-form input {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+main .contact__box-form textarea {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
 	height: 100px;
 	resize: none;
 }
-main .contact .contact__box-form button {
+main .contact__box-form p {
+	margin-bottom: 1em;
+	font-size: 1.4rem;
+	color: tomato;
+	visibility: hidden;
+}
+main .contact__box-form button {
 	align-self: center;
 	margin-bottom: 5em;
 	padding: 0.7em 4em;
@@ -437,20 +510,66 @@ main .contact .contact__box-form button {
 	cursor: pointer;
 	transition: box-shadow 0.5s;
 }
-main .contact .contact__box-form button:hover {
+main .contact__box-form button:hover {
 	box-shadow: 0 0 15px #b6b6b6;
 }
-main .contact .contact__box-form .contact__minibox {
+main .contact__box-form .contact__minibox {
 	width: 100%;
 }
-main .contact .contact__box-form .contact__minibox input {
-	margin-top: 1em;
-	margin-bottom: 4em;
+main .contact__box .popup {
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	flex-direction: column;
+	padding: 5em 3em;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	box-shadow: 0 0 15px #ddd;
+	color: #000;
+	background-color: #fff;
+	z-index: 50;
 }
-main .contact .contact__box-map {
+main .contact__box .popup-info {
+	margin-bottom: 3em;
+	font-size: 1.6rem;
 	text-align: center;
 }
-main .contact .contact__box-map iframe {
+main .contact__box .popup-btn {
+	align-self: center;
+	padding: 1em 3em;
+	border: 1px solid #32d977;
+	border-radius: 15px;
+	background-color: #32d977;
+	box-shadow: 0 0 15px #15a451;
+	color: #fff;
+	font-family: Raleway, 'sens-serif';
+	font-size: 1.6rem;
+	transition: box-shadow 0.3s;
+}
+main .contact__box .popup-btn:hover {
+	box-shadow: 0 0 15px #108641;
+}
+main .contact__box-form-btn {
+	align-self: center;
+	margin-bottom: 4em;
+	padding: 1em 3em;
+	border: 1px solid #32d977;
+	border-radius: 15px;
+	background-color: #32d977;
+	box-shadow: 0 0 15px #15a451;
+	color: #fff;
+	font-family: Raleway, 'sens-serif';
+	font-size: 1.6rem;
+	transition: box-shadow 0.3s;
+}
+main .contact__box-form-btn:hover {
+	box-shadow: 0 0 15px #108641;
+}
+main .contact__box-map {
+	text-align: center;
+}
+main .contact__box-map iframe {
 	margin-top: 2em;
 	padding: 1em;
 	height: 200px;
@@ -586,7 +705,7 @@ footer {
 	}
 	main .offers__boxes-box {
 		margin: 3em 1em;
-		padding: 4em 8em;
+		padding: 4em 3em;
 	}
 	main .offers__boxes-box ul li {
 		font-size: 2rem;
@@ -604,26 +723,53 @@ footer {
 		font-size: 2.4rem;
 		font-weight: 300;
 	}
-	main .contact {
-		padding: 6em 4em;
+	main .offers__case {
+		padding: 3em 2em;
+	}
+	main .offers__case-bottom {
+		margin-bottom: 4em;
+	}
+	main .offers__case-title {
+		font-size: 2.2rem;
+	}
+	main .offers__case-text {
+		font-size: 1.8rem;
 	}
 	main .contact .section-title {
-		margin-bottom: 2em;
-		font-size: 3.2rem;
+		font-size: 3.6rem;
+	}
+	main .contact__icons .icons__minibox {
+		margin: 2em 0;
+	}
+	main .contact__icons .icons__minibox i {
+		font-size: 3.8rem;
+	}
+	main .contact__icons .icons__minibox p {
+		font-size: 1.6rem;
 	}
 	main .contact .contact__box-form label {
 		font-size: 2rem;
 	}
 	main .contact .contact__box-form input,
 	main .contact .contact__box-form textarea {
-		margin-bottom: 2em;
+		margin-bottom: 0.5em;
 		padding: 1em;
 	}
 	main .contact .contact__box-form textarea {
 		height: 100px;
 		resize: none;
 	}
-	main .contact .contact__box-form button,
+	main .contact .contact__box-form p {
+		margin-bottom: 2em;
+		font-size: 1.6rem;
+	}
+	main .contact .contact__box button {
+		font-size: 1.8rem;
+	}
+	main .contact .contact__box .popup {
+		height: 300px;
+		width: 500px;
+	}
 	main .contact .contact__box-map .title {
 		font-size: 2rem;
 	}
@@ -728,10 +874,6 @@ footer {
 	main .offers .section-info {
 		font-size: 1.8rem;
 	}
-	main .offers__boxes-box {
-		margin: 3em 1em;
-		padding: 5em 8em;
-	}
 	main .offers__boxes-box ul li {
 		font-size: 2.4rem;
 	}
@@ -748,29 +890,79 @@ footer {
 	main .offers__link {
 		font-size: 2.6rem;
 	}
-	main .contact {
-		padding: 7em 4em;
+	main .offers__case {
+		padding: 3em 2em;
+	}
+	main .offers__case-top {
+		margin-bottom: 1.5em;
+		padding: 1em;
+		border: 1px solid #000;
+		overflow: hidden;
+	}
+	main .offers__case-top img {
+		width: 100%;
+		transition: scale 0.5s;
+	}
+	main .offers__case-top img:hover {
+		scale: 1.1;
+	}
+	main .offers__case-title {
+		font-size: 2rem;
+	}
+	main .offers__case-text {
+		font-size: 1.6rem;
 	}
 	main .contact .section-title {
 		font-size: 3.6rem;
 	}
-	main .contact .contact__box-form label {
+	main .contact__icons {
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 0;
+	}
+	main .contact__icons .icons__minibox {
+		flex-direction: column;
+		margin: 3em 0;
+		width: 50%;
+	}
+	main .contact__icons .icons__minibox i {
+		font-size: 4.2rem;
+	}
+	main .contact__icons .icons__minibox p {
+		font-size: 1.8rem;
+		text-align: center;
+	}
+	main .contact__box-form label {
 		font-size: 2.2rem;
 	}
-	main .contact .contact__box-form input,
-	main .contact .contact__box-form textarea {
-		margin-bottom: 2em;
-		padding: 1em;
+	main .contact__box-form input,
+	main .contact__box-form textarea {
+		padding: 1.5em 1em;
 	}
-	main .contact .contact__box-form textarea {
-		margin-bottom: 3em;
+	main .contact__box-form textarea {
 		height: 130px;
 	}
-	main .contact .contact__box-form button,
-	main .contact .contact__box-map .title {
+	main .contact__box-form p {
+		margin-bottom: 2em;
+		font-size: 1.8rem;
+	}
+	main .contact__box button {
+		font-size: 2rem;
+	}
+	main .contact__box .popup {
+		height: 400px;
+		width: 600px;
+	}
+	main .contact__box .popup-info {
+		font-size: 2rem;
+	}
+	main .contact__box .popup-btn {
+		font-size: 1.8rem;
+	}
+	main .contact__box-map .title {
 		font-size: 2.2rem;
 	}
-	main .contact .contact__box-map iframe {
+	main .contact__box-map iframe {
 		width: 550px;
 	}
 	main .summary {
@@ -898,7 +1090,7 @@ footer {
 	}
 	main .offers__boxes-box {
 		margin: 3em auto;
-		padding: 5em 4em;
+		width: 450px;
 	}
 	main .offers__boxes-box ul li {
 		font-size: 2.4rem;
@@ -931,23 +1123,62 @@ footer {
 		width: 105%;
 		color: #fff;
 	}
-	main .contact {
-		padding: 8em 4em;
+	main .offers__case {
+		display: flex;
+		margin: 0 auto;
+		max-width: 1200px;
+		width: 100%;
+		padding: 4em 2em;
+	}
+	main .offers__case-top {
+		height: 100%;
+		width: 50%;
+	}
+	main .offers__case-bottom {
+		width: 50%;
+		margin-bottom: 4em;
+		padding: 2em;
+	}
+	main .offers__case-title {
+		font-size: 2.4rem;
+	}
+	main .offers__case-text {
+		font-size: 1.8rem;
+		line-height: 2;
 	}
 	main .contact .section-title {
 		font-size: 4rem;
 	}
-	main .contact .contact__box-form label {
+	main .contact__icons .icons__minibox {
+		width: 50%;
+	}
+	main .contact__icons .icons__minibox i {
+		font-size: 4.8rem;
+	}
+	main .contact__box {
+		display: flex;
+		justify-content: center;
+	}
+	main .contact__box-form {
+		width: 80%;
+	}
+	main .contact__box-form label {
 		font-size: 2.2rem;
 	}
-	main .contact .contact__box-form textarea {
+	main .contact__box-form textarea {
 		height: 150px;
 	}
-	main .contact .contact__box-form button,
-	main .contact .contact__box-map .title {
+	main .contact__box-form button,
+	main .contact__box .popup-info {
 		font-size: 2.4rem;
 	}
-	main .contact .contact__box-map iframe {
+	main .contact__box .popup-btn {
+		font-size: 1.8rem;
+	}
+	main .contact__box-map .title {
+		font-size: 2.4rem;
+	}
+	main .contact__box-map iframe {
 		width: 600px;
 	}
 	main .summary {
@@ -1045,13 +1276,9 @@ footer {
 		margin-top: 0;
 		margin-left: 5em;
 	}
-	.nav__box a:nth-child(2) {
-		color: #000;
-		background-color: #fff;
-	}
-	.nav__box a:nth-child(2):hover {
-		color: #fff;
+	.nav__box .active {
 		background-color: #000;
+		color: #fff;
 	}
 	.header {
 		height: 800px;
@@ -1128,12 +1355,11 @@ footer {
 	}
 	main .offers__boxes {
 		justify-content: space-around;
-		margin: 0 1em;
 	}
 	main .offers__boxes-box {
 		margin: 3em;
-		padding: 2em;
-		width: 500px;
+		padding: 5em 4em;
+		width: 450px;
 	}
 	main .offers__boxes-box ul li {
 		font-size: 2.4rem;
@@ -1167,48 +1393,59 @@ footer {
 		width: 105%;
 		color: #fff;
 	}
+	main .offers__case {
+		padding: 6em 2em;
+	}
+	main .offers__case-title {
+		font-size: 2.6rem;
+	}
+	main .offers__case-text {
+		font-size: 2rem;
+		line-height: 2;
+	}
 	main .contact {
-		padding: 10em 4em;
+		margin: 0 auto;
+		min-width: 1200px;
+		width: 100%;
 	}
 	main .contact .section-title {
 		font-size: 4.4rem;
 	}
+	main .contact .contact__box {
+		display: flex;
+	}
 	main .contact .contact__box-form {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(6, 100px);
-		gap: 20px;
+		grid-template-rows: repeat(3, 100px);
+		gap: 40px;
 	}
 	main .contact .contact__box-form label {
-		font-size: 2.4rem;
+		font-size: 2.8rem;
 	}
 	main .contact .contact__box-form input {
-		margin-bottom: 3em;
+		margin-bottom: 0.5em;
 	}
 	main .contact .contact__box-form textarea {
 		margin-top: 1em;
 		height: 200px;
 	}
-	main .contact .contact__box-form button {
-		grid-column: 3/5;
-		grid-row: 6/7;
-		font-size: 2.6rem;
+	main .contact .contact__box-form p {
+		margin-top: 0;
 	}
-	main .contact .contact__box-form .one {
+	main .contact .contact__box-form .contact__minibox-one {
 		grid-column: 1/4;
 		grid-row: 1/2;
 	}
-	main .contact .contact__box-form .two {
+	main .contact .contact__box-form .contact__minibox-two {
 		grid-column: 4/7;
 		grid-row: 1/2;
 	}
-	main .contact .contact__box-form .three {
+	main .contact .contact__box-form .contact__minibox-three {
 		grid-column: 1/7;
-		grid-row: 2/3;
 	}
-	main .contact .contact__box-form .four {
-		grid-column: 1/7;
-		grid-row: 3/4;
+	main .contact .contact__box .contact__box-form-btn {
+		margin-top: 4em;
 	}
 	main .contact .contact__box-map .title {
 		font-size: 2.4rem;
@@ -1358,16 +1595,35 @@ footer {
 		width: 105%;
 		color: #fff;
 	}
+	main .offers__case {
+		max-width: 1400px;
+		padding: 8em 1em;
+	}
+	main .offers__case-bottom {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
 	main .contact .section-title {
-		margin-bottom: 0;
 		font-size: 5rem;
+	}
+	main .contact__icons {
+		margin: 0 auto;
+		max-width: 1200px;
+		width: 100%;
+	}
+	main .contact__icons .icons__minibox {
+		width: 25%;
 	}
 	main .contact .contact__box-form {
 		margin: 0 auto;
 		max-width: 1400px;
 		width: 100%;
-		gap: 40px;
+		gap: 50px;
 		padding: 12em 4em;
+	}
+	main .contact .contact__box .contact__box-form-btn {
+		margin-top: 0;
 	}
 	main .contact .contact__box-map .title {
 		font-size: 2.4rem;

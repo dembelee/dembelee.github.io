@@ -22,7 +22,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="/dist/css/main.min.css">
+        <link rel="stylesheet" href="../dist/css/main.min.css">
         <script src="https://kit.fontawesome.com/ce60aed5a5.js" crossorigin="anonymous"></script>
     </head>
 
@@ -44,7 +44,7 @@
                 <a href="/index.html" class="nav__box-link">Home</a>
                 <a href="#" class="nav__box-link">O nas</a>
                 <a href="/offer.html" class="nav__box-link">Oferta</a>
-                <a href="/contact.html" class="nav__box-link">Kontakt</a>
+                <a href="#" class="nav__box-link link-active">Kontakt</a>
             </div>
             </button>
         </nav>
@@ -63,26 +63,57 @@
 
                 <h1 class="section-title">Kontakt</h1>
 
+                <div class="icons__box">
+                    <div class="contact__icons">
+                        <div class="icons__minibox">
+                            <i class="fa-brands fa-instagram"></i>
+                            <p class="contact__icons-ig">Znajdź nas na Instagramie
+                            </p>
+                        </div>
+                        <div class="icons__minibox">
+                            <i class="fa-brands fa-facebook"></i>
+                            <p class="contact__icons-fb">Obejrzyj nasz profil na
+                                Facebooku
+                            </p>
+                        </div>
+                        <div class="icons__minibox">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <p class="contact__icons-phone">+48 000 000
+                                000
+                            </p>
+                        </div>
+                        <div class="icons__minibox">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p class="contact__icons-mail">kontakt@kontakt.pl</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="contact__box">
                     <form class="contact__box-form">
-                        <div class="contact__minibox one">
-                            <label>✉️ Imię:</label>
-                            <input type="text" id="first-name">
+                        <div class="contact__minibox contact__minibox-one">
+                            <label>✉️ Imię i Nazwisko:</label>
+                            <input type="text" id="first-name" placeholder="Wpisz imię i nazwisko...">
+                            <p class="name-error">Popraw</p>
                         </div>
-                        <div class="contact__minibox two">
-                            <label>✉️ Nazwisko:</label>
-                            <input type="text" id="surrname">
-                        </div>
-                        <div class="contact__minibox three">
+                        <div class="contact__minibox contact__minibox-two">
                             <label>✉️ Adres e-mail:</label>
-                            <input type="email" id="mail">
+                            <input type="email" id="mail" placeholder="Wpisz adres e-mail...">
+                            <p class="name-error">nic</p>
                         </div>
-                        <div class="contact__minibox four">
+                        <div class="contact__minibox contact__minibox-three">
                             <label>✉️ Wiadomość:</label>
-                            <textarea id="contact-area"></textarea>
+                            <textarea id="contact-area" placeholder="Wpisz wiadomość..."></textarea>
+                            <p class="name-error">Popraw</p>
                         </div>
-                        <button class="contact__box-form-btn">Wyślij</button>
                     </form>
+                    <button class="contact__box-form-btn">Wyślij</button>
+
+                    <div class="popup">
+                        <h2 class="popup-info">Wiadomość została wysłana!</h2>
+                        <button type="button" class="popup-btn">Zamknij</button>
+                    </div>
+
                     <div class="contact__box-map">
                         <h2 class="title">Jesteśmy tutaj:</h2>
                         <iframe
@@ -158,12 +189,12 @@
 
             </section>
         </main>
-
         <hr>
 
         <footer class="footer">&copy;<span class="footer__year"></span> Forest Group Company Ltd.</footer>
 
         <script src="/dist/js/main.min.js"></script>
+        <script src="/dist/js/contact.min.js"></script>
     </body>
 
     </html>

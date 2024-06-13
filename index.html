@@ -10,11 +10,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <link rel="stylesheet" href="../dist/css/main.min.css">
     <script src="https://kit.fontawesome.com/ce60aed5a5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+    <nav class="nav">
+        <a href="#" class="nav__icon"><i class="fa-solid fa-tree"></i>Forest</a>
+        <div class="nav__box">
+            <a href="#home" class="nav__box-link link-active">Home</a>
+            <a href="#aboutus" class="nav__box-link">O nas</a>
+            <a href="#offers" class="nav__box-link">Oferta</a>
+            <a href="/contact.html" class="nav__box-link">Kontakt</a>
+        </div>
+        </button>
+    </nav>
 
     <div class="nav2">
         <a href="#" class="top__icon"><i class="fa-solid fa-tree"></i>Forest</a>
@@ -27,18 +38,8 @@
             <i class="fa-solid fa-xmark"></i></button>
     </div>
 
-    <nav class="nav">
-        <a href="#" class="nav__icon"><i class="fa-solid fa-tree"></i>Forest</a>
-        <div class="nav__box">
-            <a href="#" class="nav__box-link home-n">Home</a>
-            <a href="#aboutus" class="nav__box-link aboutus-n">O nas</a>
-            <a href="#offers" class="nav__box-link offers-n">Oferta</a>
-            <a href="/contact.html" class="nav__box-link contact-n">Kontakt</a>
-        </div>
-        </button>
-    </nav>
 
-    <header class="header">
+    <header class="header scrollspy" id="home">
         <div class="header__box">
             <p class="header__box-text">Forest Group</p>
             <h1 class="header__box-title">Najpiękniejszy park w Twojej okolicy!</h1>
@@ -48,7 +49,7 @@
 
     <main class="main">
 
-        <section class="aboutus" id="aboutus">
+        <section class="aboutus scrollspy" id="aboutus">
 
             <h2 class="section-title">o nas</h2>
             <div class="aboutus__box">
@@ -74,7 +75,7 @@
             <div class="bg-shadow"></div>
         </section>
 
-        <section class="offers" id="offers">
+        <section class="offers scrollspy" id="offers">
             <h2 class="section-title">oferta</h2>
             <h3 class="section-info">Wybierz jedną z naszych wspaniałych ofert!</h3>
             <div class="offers__boxes">
