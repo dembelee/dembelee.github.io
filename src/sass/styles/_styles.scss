@@ -1,0 +1,38 @@
+@use '../colors/colors';
+
+// body scroll
+.body-styles {
+	overflow: hidden;
+	touch-action: none;
+}
+
+// nav scroll styles
+.nav-handle {
+	top: 5px;
+	padding: 0.5em 2em;
+	width: 90%;
+	max-width: 1300px;
+	background: colors.$nav-bg;
+	backdrop-filter: blur(5px);
+}
+
+// nav mobile animations
+.nav-show {
+	animation: showNav 0.5s forwards;
+}
+
+.nav-hide {
+	animation: hideNav 0.5s forwards;
+}
+
+// mobile menu showing
+.handle-menu {
+	transform: translateX(0);
+}
+
+// nav desktop active link's style
+.nav__desktop--link[aria-current='page'] {
+	&::after {
+		width: 100%;
+	}
+}

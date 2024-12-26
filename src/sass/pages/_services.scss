@@ -1,0 +1,249 @@
+@use '../colors/colors';
+@use '../styles/mixins';
+
+.head__second {
+	min-height: 30vh;
+
+	&__container {
+		&--icons {
+			svg {
+				// first paw
+				&:nth-child(1) {
+					top: -20%;
+				}
+
+				// second paw
+				&:nth-child(2) {
+					bottom: -40%;
+				}
+
+				// first bone
+				&:nth-child(3) {
+					top: -20%;
+					left: 30%;
+				}
+
+				// second bone
+				&:nth-child(4) {
+					bottom: -10%;
+					transform: rotate(20deg);
+				}
+			}
+		}
+	}
+
+	&__title {
+		position: relative;
+		font-size: 3.4rem;
+
+		img {
+			position: absolute;
+			bottom: -20px;
+			right: 5px;
+			width: 130px;
+		}
+	}
+}
+
+.services {
+	padding: 2em;
+	background: colors.$white-color;
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	&__card {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 2.5em;
+		width: 100%;
+		border-radius: 15px;
+		box-shadow: 0 0 10px colors.$card-shadow;
+		transition: box-shadow 0.3s;
+
+		&:hover {
+			box-shadow: 0 0 10px colors.$hover-gray;
+
+			.services__card--bottom {
+				color: colors.$spare-color;
+			}
+		}
+
+		&--special {
+			background: colors.$card-special;
+
+			h3,
+			ul li {
+				color: colors.$white-color;
+			}
+
+			.services__card--bottom {
+				color: colors.$special-number-color;
+			}
+
+			&:hover {
+				box-shadow: 0 0 10px colors.$hover-green;
+
+				.services__card--bottom {
+					color: colors.$special-number-hover;
+				}
+			}
+		}
+
+		&--top {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5em;
+		}
+
+		&--title {
+			font-size: 2.6rem;
+			font-weight: normal;
+			font-family: 'Chewy';
+			color: colors.$spare-color;
+
+			&-special {
+				color: colors.$main-color;
+			}
+		}
+
+		&--text {
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5em;
+				margin-left: 1.5em;
+				color: colors.$spare-color;
+
+				li {
+					font-size: 1.3rem;
+				}
+			}
+		}
+
+		&--bottom {
+			margin-top: 1em;
+			margin-left: auto;
+			font-size: 2rem;
+			font-weight: bold;
+			color: colors.$number-color;
+			transition: color 0.3s;
+		}
+	}
+}
+
+.bar {
+	padding: 1.5em 0;
+	background: colors.$main-color;
+	overflow: hidden;
+
+	.wrapper {
+		width: 1600px;
+		overflow: hidden;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		animation: slideLeft 160s infinite;
+
+		&--text {
+			font-size: 1.4rem;
+			color: colors.$white-color;
+		}
+
+		&--long {
+			width: 160px;
+		}
+
+		&--icon {
+			display: flex;
+			align-items: center;
+
+			svg {
+				margin: 0 2em;
+				width: 25px;
+
+				path {
+					fill: colors.$white-color;
+				}
+			}
+		}
+	}
+}
+
+.visitus {
+	padding: 2em;
+	background: colors.$white-color;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		&--img {
+			width: 100%;
+			border-radius: 15px;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		margin-top: 2em;
+
+		&--title {
+			margin: 0;
+			font-size: 3.2rem;
+
+			span {
+				display: block;
+			}
+		}
+
+		&--text {
+			font-size: 1.35rem;
+			color: colors.$text-color;
+		}
+
+		&--hours {
+			@include mixins.hoursList;
+			color: colors.$spare-color;
+
+			h5 {
+				font-weight: 450;
+			}
+
+			p {
+				font-size: 1.3rem;
+			}
+		}
+
+		&--btn {
+			@include mixins.boneBtn;
+			margin: 3em auto;
+			padding: 1.3em 3em;
+			background: colors.$main-color;
+
+			.circle {
+				background: colors.$main-color;
+			}
+		}
+	}
+}

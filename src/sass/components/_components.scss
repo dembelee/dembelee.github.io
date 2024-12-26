@@ -1,0 +1,34 @@
+@use '../colors/colors';
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1400px;
+	width: 100%;
+}
+
+.section__title {
+	margin: 0.5em 0;
+	font-size: 3.4rem;
+	font-family: 'Chewy', 'Poppins';
+	font-weight: 500;
+	color: colors.$spare-color;
+
+	span {
+		color: colors.$main-color;
+	}
+}
+
+.special__btn {
+	padding: 0.8em 2em;
+	color: colors.$white-color;
+	background: colors.$extra-color;
+	border-radius: 50px;
+	font-weight: 450;
+	font-family: 'Poppins', 'sans-serif';
+	font-size: 1.2rem;
+	transition: background 0.3s;
+
+	&:hover {
+		background: colors.$green-hover;
+	}
+}

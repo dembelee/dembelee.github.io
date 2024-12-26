@@ -1,0 +1,234 @@
+@use '../colors/colors';
+
+// meetus section styles
+.meetus {
+	padding: 0 2em;
+	padding-bottom: 4em;
+	background: colors.$white-color;
+
+	// card styles
+	&__card {
+		margin: 0 auto;
+		padding: 2em 3em;
+		max-width: 1400px;
+		background: #ddd;
+		border-radius: 25px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+
+		&--text {
+			font-weight: 450;
+			font-size: 1.2rem;
+			line-height: 24px;
+			color: colors.$spare-color;
+		}
+
+		&--icons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2em;
+			margin-top: 3em;
+
+			a {
+				padding: 0.5em;
+
+				&:hover {
+					svg {
+						path {
+							fill: colors.$main-color;
+						}
+					}
+				}
+			}
+
+			svg {
+				width: 35px;
+
+				path {
+					fill: colors.$spare-color;
+					transition: fill 0.3s;
+				}
+			}
+		}
+	}
+	// end of card styles
+
+	// container, container's components styles
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		&--title {
+			position: relative;
+			margin: 2em 0;
+			font-size: 4.6rem;
+
+			img {
+				position: absolute;
+				top: -30%;
+				right: -12%;
+				width: 100px;
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 2em;
+		margin: 2em 0;
+		padding: 2em;
+		width: 100%;
+		border-radius: 15px;
+		box-shadow: 0 0 12px #ddd;
+		transition: box-shadow 0.3s;
+
+		&:hover {
+			box-shadow: 0 0 12px #aaa;
+
+			.meetus__box--carrer {
+				color: colors.$main-color;
+
+				&::after {
+					scale: 1;
+				}
+			}
+		}
+
+		&--img {
+			padding: 0.8em;
+			height: 120px;
+			width: 120px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+
+		&--text {
+			font-size: 1.2rem;
+			color: colors.$black-color;
+			text-align: center;
+		}
+
+		&--data {
+			margin-top: auto;
+		}
+
+		&--name {
+			margin-top: auto;
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+
+		&--carrer {
+			position: relative;
+			color: colors.$carrer-text-color;
+			font-size: 1.1rem;
+			text-align: center;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				height: 2px;
+				width: 125px;
+				background: colors.$main-color;
+				transform: translateX(-50%);
+				scale: 0;
+				transition: scale 0.3s;
+			}
+		}
+	}
+	// end of container, container's components styles
+}
+// end of meetus section styles
+
+// banner section styles
+.banner {
+	padding: 2em 1em;
+	overflow: hidden;
+
+	&__paws {
+		&--pair {
+			position: absolute;
+			z-index: 0;
+
+			// first pair
+			&:nth-child(1) {
+				bottom: -50%;
+				left: -5%;
+				transform: rotate(15deg);
+			}
+
+			// second pair
+			&:nth-child(2) {
+				bottom: 50%;
+				left: 5%;
+				transform: rotate(20deg);
+			}
+
+			// third pair
+			&:nth-child(3) {
+				bottom: 50%;
+				right: 5%;
+				transform: rotate(150deg);
+			}
+
+			// fourth pair
+			&:nth-child(4) {
+				bottom: -15%;
+				right: -10%;
+				transform: rotate(155deg);
+			}
+
+			svg {
+				width: 40px;
+
+				path {
+					fill: colors.$special-color;
+				}
+
+				&:nth-child(2) {
+					margin-left: 0.5em;
+					margin-bottom: 4em;
+				}
+			}
+		}
+
+		// bones pair
+		&--bones {
+			display: none;
+		}
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		&--title {
+			margin: 0;
+			margin-bottom: 0.5em;
+			font-size: 2.2rem;
+			color: colors.$white-color;
+			text-align: center;
+			z-index: 1;
+		}
+
+		&--btn {
+			background: colors.$spare-color;
+			z-index: 1;
+
+			&:hover {
+				background: colors.$spare-effect;
+			}
+		}
+	}
+}
+// end of banner section styles

@@ -1,0 +1,1023 @@
+@use '../colors/colors';
+
+@media (min-width: 992px) {
+	// special btn styles
+	.special__btn {
+		font-size: 1.3rem;
+	}
+	// end of special btn styles
+
+	// nav desktop styles
+	.nav {
+		&__desktop {
+			&--logo {
+				display: flex;
+				width: 65px;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			&--links {
+				gap: 3em;
+			}
+
+			&--link {
+				font-size: 1.4rem;
+			}
+		}
+	}
+	// end of nav desktop styles
+
+	// header styles
+	.header {
+		&__box {
+			width: 60%;
+
+			&--title {
+				font-size: 5rem;
+			}
+
+			&--span {
+				font-size: 8.4rem;
+			}
+
+			&--underline {
+				bottom: -90px;
+				right: 10px;
+				width: 380px;
+			}
+
+			&--info {
+				margin: 2em 0;
+				font-size: 1.5rem;
+				width: 550px;
+			}
+
+			&--btn {
+				margin-bottom: 22em;
+			}
+		}
+
+		&__img {
+			top: 60%;
+			left: 70%;
+			width: 1500px;
+		}
+	}
+	// end of header styles
+
+	// main
+	.main {
+		// aboutus section styles
+		.aboutus {
+			&__box {
+				&--title {
+					font-size: 6rem;
+				}
+
+				&--info {
+					font-size: 1.4rem;
+					line-height: 30px;
+				}
+
+				&--btn {
+					margin-top: 4em;
+				}
+			}
+		}
+		// end of aboutus section styles
+
+		// custody section styles
+		.custody {
+			&__containers {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			&__box {
+				&--text {
+					max-width: 35rem;
+				}
+			}
+		}
+		// end of custody section styles
+
+		// offers section styles
+		.offers {
+			padding: 4em 2em;
+
+			&__container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			&__head {
+				width: 45%;
+			}
+
+			&__body {
+				width: 45%;
+
+				&--title {
+					font-size: 4.4rem;
+				}
+
+				&--text {
+					font-size: 1.2rem;
+					line-height: 24px;
+				}
+
+				&--service {
+					flex-direction: row;
+					font-size: 1.1rem;
+
+					svg {
+						margin-right: 0.3em;
+					}
+				}
+			}
+		}
+		// end of offers section styles
+
+		// office section styles
+		.office {
+			padding: 4em 6em;
+
+			&__head {
+				&--title {
+					font-size: 4.4rem;
+				}
+
+				&--text {
+					width: 40%;
+					font-size: 1.2rem;
+				}
+			}
+
+			&__body {
+				grid-template-rows: auto;
+
+				&--img {
+					// first image
+					&:nth-child(2) {
+						align-self: flex-start;
+						grid-column: 1/4;
+						grid-row: 3/4;
+					}
+
+					// second image
+					&:nth-child(3) {
+						grid-column: 4/7;
+						grid-row: 2/3;
+					}
+
+					// third image
+					&:nth-child(4) {
+						grid-column: 4/7;
+					}
+
+					// fourth image
+					&:nth-child(5) {
+						grid-column: 1/4;
+						grid-row: 2/3;
+					}
+				}
+			}
+
+			&__card {
+				&:last-child {
+					grid-column: 4/7;
+				}
+			}
+		}
+		// end of office section styles
+
+		// findus section styles
+		.findus {
+			padding: 4em;
+			padding-bottom: 0;
+
+			&__grid {
+				grid-template-rows: repeat(2, 290px);
+			}
+
+			// card styles
+			&__card {
+				top: -8%;
+			}
+			// end of card styles
+
+			// paws box styles
+			&__paws {
+				top: 60%;
+				right: 45%;
+
+				&--pair {
+					svg {
+						width: 70px;
+					}
+				}
+			}
+			// end of paws box styles
+
+			&__container {
+				justify-content: space-between;
+			}
+
+			&__box {
+				gap: 0.5em;
+				width: 30%;
+
+				&--text {
+					width: 20%;
+				}
+
+				&--img {
+					width: 20%;
+				}
+			}
+
+			&__list {
+				justify-content: flex-end;
+				gap: 3em;
+				width: 70%;
+
+				&--third {
+					gap: 1em;
+				}
+			}
+
+			// findus subpages styles
+			&__second {
+				padding: 2em 0;
+			}
+			// end offindus subpages styles
+		}
+		// end of findus section styles
+
+		// crew subpage media
+		// head styles
+		.head {
+			height: 25vh;
+
+			&__container {
+				padding: 2em 5em;
+			}
+
+			&__title {
+				font-size: 4rem;
+			}
+
+			&__text {
+				margin-bottom: 1em;
+				width: 500px;
+				font-size: 1.2rem;
+			}
+		}
+		// end of head styles
+
+		// meetus section styles
+		.meetus {
+			&__card {
+				padding: 2em 4em;
+				width: 95%;
+			}
+
+			&__box {
+				padding: 3em;
+				width: 45%;
+				max-width: 400px;
+
+				&--img {
+					height: 90px;
+					width: 90px;
+				}
+
+				&--name {
+					font-size: 1.8rem;
+				}
+
+				&--carrer {
+					font-size: 1.2rem;
+				}
+			}
+		}
+		// end of meetus section styles
+
+		// banner section styles
+		.banner {
+			padding: 6em 2em;
+
+			&__paws {
+				&--pair {
+					// third & fourth pairs styles
+					&:nth-child(3),
+					&:nth-child(4) {
+						svg {
+							&:nth-child(1) {
+								margin-bottom: 8em;
+							}
+						}
+					}
+				}
+
+				// bones pair
+				&--bones {
+					bottom: -140%;
+
+					svg {
+						&:last-child {
+							transform: rotate(-70deg);
+						}
+					}
+				}
+			}
+
+			&__container {
+				&--title {
+					margin-right: 2em;
+					font-size: 3.6rem;
+				}
+			}
+		}
+		// end of banner section styles
+		// end of crew subpage media
+
+		// services subpage media
+		// head styles
+		.head__second {
+			height: 20vh;
+
+			&__title {
+				margin-bottom: 0.5em;
+				font-size: 5.4rem;
+
+				img {
+					width: 210px;
+				}
+			}
+		}
+		// end of head styles
+
+		// services section styles
+		.services {
+			&__card {
+				&--title {
+					font-size: 3.2rem;
+				}
+
+				&--text {
+					ul {
+						li {
+							font-size: 1.5rem;
+						}
+					}
+				}
+			}
+		}
+		// end of services section styles
+
+		// bar section styles
+		.bar {
+			&__box {
+				&--text {
+					font-size: 1.6rem;
+				}
+
+				&--long {
+					width: 178px;
+				}
+
+				&--icon {
+					svg {
+						width: 28px;
+					}
+				}
+			}
+		}
+		// end of bar section styles
+		// visitus section styles
+		.visitus {
+			padding: 4em 2em;
+
+			&__container {
+				flex-direction: row;
+			}
+
+			&__top {
+				width: 50%;
+
+				&--square {
+					width: 45%;
+
+					&:first-of-type {
+						top: 15%;
+						left: 0;
+					}
+
+					&:last-of-type {
+						bottom: 10%;
+						right: 2%;
+					}
+				}
+			}
+
+			&__bottom {
+				width: 50%;
+				padding: 1em 4em;
+
+				&--btn {
+					margin-left: 1em;
+					padding: 1.2em 2.5em;
+				}
+			}
+		}
+		// end of visitus section styles
+		// end of services subpage media
+	}
+	// end of main
+
+	// footer styles
+	.footer {
+		padding: 2.5em 4em;
+
+		&__box {
+			font-size: 1.3rem;
+		}
+	}
+	// end of footer styles
+}
+
+@media (min-width: 1100px) {
+	// main
+	.main {
+		// office section styles
+		.office {
+			&__head {
+				&--text {
+					width: 35%;
+					font-size: 1.2rem;
+				}
+			}
+		}
+		// end of office section styles
+
+		// crew subpage media
+		// head styles
+		.head {
+			&__container {
+				padding: 2em 4em;
+			}
+
+			&__title {
+				font-size: 4.2rem;
+			}
+
+			&__text {
+				font-size: 1.3rem;
+			}
+		}
+		// end of head styles
+		// end of crew subpage media
+
+		// services subpage media
+		// head styles
+		.head__second {
+			&__title {
+				font-size: 5.6rem;
+
+				img {
+					width: 210px;
+				}
+			}
+		}
+		// end of head styles
+
+		// services section styles
+		.services {
+			&__card {
+				width: 30%;
+
+				&--special {
+					margin: 0;
+					width: 30%;
+				}
+			}
+		}
+		// end of services section styles
+		// end of services subpage media
+	}
+	// end of main
+}
+
+@media (min-width: 1200px) {
+	// special btn styles
+	.special__btn {
+		font-size: 1.4rem;
+	}
+	// end of special btn styles
+
+	// nav desktop styles
+	.nav {
+		&__desktop {
+			&--link {
+				font-size: 1.6rem;
+			}
+		}
+	}
+	// end of nav desktop styles
+
+	// header styles
+	.header {
+		min-height: 95vh;
+
+		&__box {
+			margin: 1em;
+			padding: 1em 4em;
+			width: 65%;
+
+			&--title {
+				font-size: 6rem;
+			}
+
+			&--span {
+				font-size: 9rem;
+			}
+
+			&--info {
+				width: 85%;
+			}
+		}
+
+		&__img {
+			top: 50%;
+			left: 75%;
+			width: 1800px;
+
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				display: block;
+			}
+		}
+	}
+	// end of header styles
+
+	// main
+	.main {
+		// aboutus section styles
+		.aboutus {
+			padding: 10em 2em;
+
+			&__container {
+				grid-template-columns: repeat(6, 1fr);
+				grid-template-rows: repeat(2, 400px);
+			}
+
+			&__first {
+				grid-row: 1/3;
+			}
+
+			// second image styles
+			&__second {
+				grid-column: 5/7;
+				grid-row: 2/3;
+				height: 100%;
+				width: 100%;
+			}
+
+			// third image styles
+			&__third {
+				justify-self: flex-end;
+				grid-column: 5/7;
+				grid-row: 1/2;
+				height: 100%;
+			}
+
+			&__box {
+				grid-column: 3/5;
+				grid-row: 1/3;
+				padding: 2em;
+
+				&--title {
+					font-size: 6rem;
+				}
+
+				&--info {
+					font-size: 1.4rem;
+					line-height: 30px;
+				}
+
+				&--btn {
+					margin-top: 4em;
+				}
+			}
+		}
+		// end of aboutus section styles
+
+		// custody section styles
+		.custody {
+			&__title {
+				margin-bottom: 2em;
+				font-size: 4.8rem;
+
+				img {
+					top: -36px;
+					right: -24px;
+					width: 170px;
+				}
+			}
+
+			&__box {
+				&--title {
+					font-size: 2rem;
+				}
+
+				&--text {
+					max-width: 33rem;
+					font-size: 1.4rem;
+				}
+			}
+		}
+		// end of custody section styles
+
+		// offers section styles
+		.offers {
+			padding: 8em 2em;
+
+			&__head {
+				width: 48%;
+
+				&--img {
+					&-mobile {
+						display: none;
+					}
+
+					&-desktop {
+						display: block;
+					}
+				}
+			}
+
+			&__body {
+				width: 48%;
+
+				&--title {
+					margin-bottom: 1em;
+					font-size: 4.2rem;
+				}
+
+				&--text {
+					font-size: 1.4rem;
+					line-height: 30px;
+				}
+
+				&--service {
+					font-size: 1.3rem;
+
+					svg {
+						margin-right: 0.5em;
+					}
+				}
+			}
+		}
+		// end of offers section styles
+
+		// office section styles
+		.office {
+			padding-bottom: 14em;
+
+			.wrapper {
+				max-width: 1200px;
+			}
+
+			&__head {
+				align-items: center;
+
+				&--title {
+					font-size: 5rem;
+				}
+
+				&--text {
+					width: 40%;
+					font-size: 1.5rem;
+				}
+			}
+
+			&__body {
+				grid-template-columns: repeat(6, 1fr);
+				grid-template-rows: repeat(2, 450px);
+				gap: 1em;
+
+				&--img {
+					// first image
+					&:nth-child(2) {
+						grid-column: 1/3;
+						grid-row: 2/3;
+						height: 75%;
+					}
+
+					// second image
+					&:nth-child(3) {
+						grid-column: 5/7;
+						grid-row: 1/2;
+					}
+
+					// third image
+					&:nth-child(4) {
+						grid-column: 3/5;
+						grid-row: 1/2;
+					}
+
+					// fourth image
+					&:nth-child(5) {
+						grid-column: 3/5;
+						grid-row: 2/3;
+					}
+				}
+			}
+
+			&__card {
+				// grid styles for card
+				&:nth-of-type(1) {
+					grid-column: 1/3;
+				}
+
+				&:last-child {
+					grid-column: 5/7;
+				}
+				// end of grid styles for card
+			}
+		}
+		// end of office section styles
+
+		// findus section styles
+		.findus {
+			padding: 0 4em;
+			padding-bottom: 2em;
+
+			&__grid {
+				grid-template-rows: repeat(2, 310px);
+			}
+
+			// card styles
+			&__card {
+				top: -15%;
+			}
+			// end of card styles
+
+			// paws box styles
+			&__paws {
+				right: 45%;
+
+				svg {
+					width: 80px;
+				}
+			}
+			// end of paws box styles
+
+			// map box styles
+			&__map {
+				iframe {
+					height: 450px;
+				}
+			}
+			// end of map box styles
+
+			// body card styles
+			&__body {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				padding: 0 4em;
+
+				&--title {
+					font-size: 4.8rem;
+				}
+
+				// icon's body styles
+
+				&--icon {
+					p,
+					a {
+						font-size: 1.3rem;
+					}
+				}
+				// end of icon's body styles
+			}
+			// end of body card styles
+
+			// container's findus styles
+			&__container {
+				justify-content: center;
+				align-items: flex-end;
+			}
+
+			&__box {
+				gap: 0;
+				width: 25%;
+			}
+			// end of container's findus styles
+
+			&__list {
+				margin-bottom: 2em;
+			}
+		}
+		// end of findus section styles
+
+		// crew subpage media
+		// head styles
+		.head {
+			&__container {
+				padding: 2em 6em;
+			}
+
+			&__title {
+				font-size: 4.8rem;
+
+				img {
+					bottom: 0px;
+				}
+			}
+
+			&__text {
+				width: 510px;
+			}
+		}
+		// end of head styles
+
+		// meetus section styles
+		.meetus {
+			&__boxes {
+				gap: 3em;
+			}
+
+			&__box {
+				gap: 3em;
+				margin: 0;
+
+				&:nth-child(1) {
+					order: 1;
+				}
+
+				&:nth-child(3) {
+					order: 2;
+				}
+
+				&:nth-child(3) {
+					margin-top: 0;
+				}
+
+				&--text {
+					line-height: 26px;
+				}
+
+				&--carrer {
+					font-size: 1.3rem;
+				}
+			}
+		}
+		// end of meetus section styles
+
+		// banner section styles
+		.banner {
+			padding: 7em 2em;
+
+			&__paws {
+				&--pair {
+					// first pair
+					&:nth-child(1) {
+						left: 5%;
+						transform: rotate(25deg);
+					}
+
+					// second pair
+					&:nth-child(2) {
+						left: 10%;
+					}
+
+					// third pair
+					&:nth-child(3) {
+						bottom: 25%;
+						right: 5%;
+					}
+
+					// fourth pair
+					&:nth-child(4) {
+						bottom: -240%;
+						right: 0;
+						transform: rotate(155deg);
+					}
+
+					// third & fourth pairs styles
+					&:nth-child(3),
+					&:nth-child(4) {
+						svg {
+							&:nth-child(1) {
+								margin-bottom: 8em;
+							}
+						}
+					}
+				}
+
+				svg {
+					width: 75px;
+				}
+
+				// bones pair
+				&--bones {
+					transform: rotate(80deg);
+				}
+			}
+
+			&__container {
+				width: 90%;
+
+				&--title {
+					font-size: 4rem;
+				}
+			}
+		}
+		// end of banner section styles
+		// end of crew subpage media
+
+		// services subpage media
+		// head styles
+		.head__second {
+			&__title {
+				margin-bottom: 0.5em;
+				width: auto;
+				font-size: 5.4rem;
+
+				img {
+					bottom: -35px;
+					width: 200px;
+				}
+			}
+		}
+		// end of head styles
+
+		// services section styles
+		.services {
+			&__cards {
+				gap: 4em;
+			}
+
+			&__card {
+				&--top {
+					gap: 2em;
+				}
+
+				&--title {
+					font-size: 3rem;
+				}
+
+				&--text {
+					ul {
+						li {
+							font-size: 1.4rem;
+						}
+					}
+				}
+
+				&--bottom {
+					margin-top: 2em;
+				}
+			}
+		}
+		// end of services section styles
+		// end of services subpage media
+	}
+	// end of main
+
+	.footer {
+		.wrapper {
+			max-width: 1200px;
+		}
+
+		&__box {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+@media (min-width: 1300px) {
+	// main
+	.main {
+		// findus section styles
+		.findus {
+			&__container {
+				margin: 0 auto;
+				justify-content: space-between;
+				width: 88%;
+			}
+		}
+		// end of findus section styles
+	}
+	// end of main
+}

@@ -1,0 +1,119 @@
+// btn animation styles
+// front styles
+.btn-animation {
+	scale: 0.8;
+	animation: btnAnimation 0.3s forwards;
+	animation-delay: 0.1s;
+
+	&::after {
+		top: 0;
+		animation: afterAnimation 0.3s forwards;
+		animation-delay: 0.1s;
+	}
+
+	&::before {
+		top: 0;
+		animation: beforeAnimation 0.3s forwards;
+		animation-delay: 0.1s;
+	}
+}
+
+// back styles
+.btn-hide-animation {
+	animation: newBtnAnimation 0.3s forwards;
+
+	&::after {
+		animation: newAfterAnimation 0.3s forwards;
+	}
+
+	&::before {
+		animation: newBeforeAnimation 0.3s forwards;
+	}
+}
+// end btn animation styles
+
+// mobile button animation
+// front Animation
+@keyframes btnAnimation {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes afterAnimation {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes beforeAnimation {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(-90deg);
+	}
+}
+
+// back Animation
+@keyframes newBtnAnimation {
+	from {
+		transform: rotate(-45deg);
+	}
+
+	to {
+		transform: rotate(0);
+	}
+}
+
+@keyframes newAfterAnimation {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes newBeforeAnimation {
+	from {
+		transform: rotate(-90deg);
+	}
+
+	to {
+		transform: rotate(0);
+	}
+}
+// end mobile button animation
+
+// services subpage animations
+// bar animation
+@keyframes slideLeft {
+	0% {
+		transform: translateX(0);
+	}
+
+	25% {
+		transform: translateX(-35%);
+	}
+
+	75% {
+		transform: translateX(35%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+// end of bar animation
+// end of services subpage animations

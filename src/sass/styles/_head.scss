@@ -1,0 +1,78 @@
+@use '../colors/colors';
+
+// head styles
+.head {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	min-height: 40vh;
+	overflow: hidden;
+
+	&__container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 4em;
+		padding: 2em;
+		text-align: center;
+
+		&--icons {
+			svg {
+				position: absolute;
+				width: 50px;
+				transform: translate(-50%, -50%);
+				z-index: 0;
+
+				path {
+					fill: colors.$special-color;
+				}
+
+				// first paw
+				&:nth-child(1) {
+					top: -10%;
+					right: 10%;
+					transform: rotate(25deg);
+				}
+
+				// second paw
+				&:nth-child(2) {
+					bottom: -30%;
+					left: 15%;
+				}
+
+				// first bone
+				&:nth-child(3) {
+					top: 0;
+					left: 15%;
+					transform: rotate(90deg);
+				}
+
+				// second bone
+				&:nth-child(4) {
+					bottom: -20%;
+					right: 20%;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font-size: 2.2rem;
+		color: colors.$white-color;
+		z-index: 1;
+
+		span {
+			display: block;
+			color: colors.$white-color;
+		}
+	}
+
+	&__text {
+		padding: 0 1em;
+		color: colors.$white-color;
+		z-index: 1;
+	}
+}
+// end of head styles
