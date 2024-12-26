@@ -63,7 +63,7 @@ const closeMenu = () => {
 
 const handleMenu = () => {
 	mobileMenu.classList.toggle('handle-menu')
-	currentPageMobile()
+	// currentPageMobile()
 }
 
 const resetAnimationBtn = () => {
@@ -94,7 +94,7 @@ const actualYear = () => {
 }
 
 actualYear()
-currentPageDesktop()
+// currentPageDesktop()
 window.addEventListener('scroll', handleNav)
 barsBtn.addEventListener('click', () => {
 	bodyScroll()
