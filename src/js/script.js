@@ -46,10 +46,8 @@ const handleNav = () => {
 const currentPageMobile = e => {
 	mobileLinks.forEach(link => {
 		link.addEventListener('click', e => {
-			e.preventDefault()
 			setTimeout(() => {
 				closeMenu()
-				window.history.pushState({}, '', `${link.href}`)
 			}, 300)
 		})
 	})
@@ -63,7 +61,7 @@ const closeMenu = () => {
 
 const handleMenu = () => {
 	mobileMenu.classList.toggle('handle-menu')
-	// currentPageMobile()
+	currentPageMobile()
 }
 
 const resetAnimationBtn = () => {
