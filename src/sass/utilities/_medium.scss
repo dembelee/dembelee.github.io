@@ -191,6 +191,41 @@
 				&:last-child {
 					grid-column: 4/7;
 				}
+
+				&--icon {
+					bottom: -130%;
+
+					svg {
+						width: 180px;
+
+						path {
+							fill: colors.$gray-icons-color;
+						}
+					}
+
+					&-first {
+						display: flex;
+						transform: rotate(-25deg);
+
+						svg {
+							&:last-child {
+								margin-left: 4em;
+								transform: rotate(45deg);
+							}
+						}
+					}
+
+					&-second {
+						bottom: -100%;
+
+						svg {
+							&:last-child {
+								margin-left: 4em;
+								transform: rotate(65deg);
+							}
+						}
+					}
+				}
 			}
 		}
 		// end of office section styles
@@ -399,6 +434,7 @@
 			}
 		}
 		// end of bar section styles
+
 		// visitus section styles
 		.visitus {
 			padding: 4em 2em;
@@ -532,7 +568,7 @@
 
 	// header styles
 	.header {
-		min-height: 95vh;
+		min-height: 98vh;
 
 		&__box {
 			margin: 1em;
@@ -572,7 +608,8 @@
 	.main {
 		// aboutus section styles
 		.aboutus {
-			padding: 10em 2em;
+			padding: 0 2em;
+			padding-top: 6em;
 
 			&__container {
 				grid-template-columns: repeat(6, 1fr);
@@ -752,6 +789,21 @@
 					grid-column: 5/7;
 				}
 				// end of grid styles for card
+
+				// icons styles
+				&--icon {
+					bottom: -70%;
+					left: 10%;
+
+					svg {
+						width: 110px;
+					}
+
+					&-second {
+						bottom: -90%;
+					}
+				}
+				// end of icons styles
 			}
 		}
 		// end of office section styles
@@ -777,6 +829,7 @@
 
 				svg {
 					width: 80px;
+					opacity: 0;
 				}
 			}
 			// end of paws box styles
@@ -949,6 +1002,8 @@
 		// services subpage media
 		// head styles
 		.head__second {
+			min-height: 25vh;
+
 			&__title {
 				margin-bottom: 0.5em;
 				width: auto;

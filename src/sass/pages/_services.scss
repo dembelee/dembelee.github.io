@@ -67,6 +67,7 @@
 		border-radius: 15px;
 		box-shadow: 0 0 10px colors.$card-shadow;
 		transition: box-shadow 0.3s;
+		opacity: 0;
 
 		&:hover {
 			box-shadow: 0 0 10px colors.$hover-gray;
@@ -153,7 +154,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		animation: slideLeft 160s infinite;
+		animation: slideLeft 200s infinite;
 
 		&--text {
 			font-size: 1.4rem;
@@ -183,6 +184,7 @@
 .visitus {
 	padding: 2em;
 	background: colors.$white-color;
+	overflow: hidden;
 
 	&__container {
 		display: flex;
@@ -199,6 +201,7 @@
 		&--img {
 			width: 100%;
 			border-radius: 15px;
+			opacity: 0;
 		}
 	}
 
@@ -207,6 +210,13 @@
 		flex-direction: column;
 		gap: 2em;
 		margin-top: 2em;
+
+		&--title,
+		&--text,
+		&--hours,
+		&--btn {
+			opacity: 0;
+		}
 
 		&--title {
 			margin: 0;

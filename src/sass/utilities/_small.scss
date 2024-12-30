@@ -273,9 +273,9 @@
 			}
 
 			&--underline {
-				bottom: -65px;
+				bottom: -75px;
 				right: 0;
-				width: 250px;
+				width: 280px;
 			}
 
 			&--info {
@@ -343,6 +343,7 @@
 		.aboutus {
 			&__container {
 				gap: 2em;
+				padding-bottom: 4em;
 			}
 
 			&__second {
@@ -497,7 +498,9 @@
 			}
 
 			&__card {
+				position: relative;
 				width: 100%;
+				z-index: 1;
 
 				// grid styles for card
 				&:nth-of-type(1) {
@@ -519,6 +522,46 @@
 
 				&--bottom {
 					font-size: 1.2rem;
+				}
+
+				&--icon {
+					display: block;
+					position: absolute;
+					bottom: -80%;
+					left: 0;
+					z-index: -1;
+
+					svg {
+						path {
+							fill: colors.$gray-icons-color;
+						}
+					}
+
+					&-first {
+						display: flex;
+						left: 7%;
+						transform: rotate(-25deg);
+
+						svg {
+							width: 120px;
+
+							&:last-child {
+								margin-left: 4em;
+								transform: rotate(45deg);
+							}
+						}
+					}
+
+					&-second {
+						svg {
+							width: 140px;
+
+							&:last-child {
+								margin-left: 4em;
+								transform: rotate(65deg);
+							}
+						}
+					}
 				}
 			}
 		}
@@ -627,6 +670,10 @@
 				width: 40%;
 			}
 
+			&__bottom {
+				padding: 0;
+			}
+
 			&__list {
 				margin-top: 0;
 				width: 45%;
@@ -652,7 +699,7 @@
 		// crew subpage media
 		// head styles
 		.head {
-			min-height: 30vh;
+			min-height: 3vh;
 			overflow: hidden;
 
 			&__container {
@@ -836,7 +883,7 @@
 		// services subpage media
 		// head styles
 		.head__second {
-			min-height: 25vh;
+			min-height: 30vh;
 
 			&__title {
 				margin-bottom: 0.3em;
@@ -943,6 +990,7 @@
 					z-index: 0;
 					background: colors.$light-gray;
 					border-radius: 15px;
+					opacity: 0;
 
 					&:first-of-type {
 						top: 15%;

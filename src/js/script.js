@@ -20,15 +20,24 @@ const desktopLinks = document.querySelectorAll('.nav__desktop--link')
 // footer year
 const footerYear = document.querySelector('.footer__box--year')
 
-const currentPageDesktop = () => {
-	desktopLinks.forEach(link => {
-		link.addEventListener('click', e => {
-			// e.preventDefault()
-			setTimeout(() => {
-				// window.history.pushState({}, null, `${link.href}`)
-			}, 100)
+const desktopHoverLinks = () => {
+	if (window.innerWidth >= 768 && window.innerWidth <= 1024) {
+		desktopLinks.forEach(link => {
+			link.addEventListener('click', e => {
+				e.preventDefault()
+				if (link.href) {
+					const target = link.href
+
+					setTimeout(() => {
+						closeMenu()
+						setTimeout(() => {
+							window.location.replace(target)
+						}, 200)
+					}, 200)
+				}
+			})
 		})
-	})
+	}
 }
 
 const handleNav = () => {
@@ -43,12 +52,21 @@ const handleNav = () => {
 	}
 }
 
-const currentPageMobile = e => {
+const mobileHoverLinks = e => {
 	mobileLinks.forEach(link => {
 		link.addEventListener('click', e => {
-			setTimeout(() => {
-				closeMenu()
-			}, 300)
+			e.preventDefault()
+
+			if (link.href) {
+				const target = link.href
+
+				setTimeout(() => {
+					closeMenu()
+					setTimeout(() => {
+						window.location.replace(target)
+					}, 300)
+				}, 300)
+			}
 		})
 	})
 }
@@ -61,7 +79,7 @@ const closeMenu = () => {
 
 const handleMenu = () => {
 	mobileMenu.classList.toggle('handle-menu')
-	currentPageMobile()
+	mobileHoverLinks()
 }
 
 const resetAnimationBtn = () => {
@@ -92,7 +110,7 @@ const actualYear = () => {
 }
 
 actualYear()
-// currentPageDesktop()
+desktopHoverLinks()
 window.addEventListener('scroll', handleNav)
 barsBtn.addEventListener('click', () => {
 	bodyScroll()

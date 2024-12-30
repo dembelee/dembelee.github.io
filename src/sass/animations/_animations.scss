@@ -32,6 +32,379 @@
 }
 // end btn animation styles
 
+// aboutus images class for animation
+.elements-slide {
+	overflow: hidden;
+
+	img:nth-child(1) {
+		opacity: 0;
+		animation: slideLeftSection 1.5s forwards;
+	}
+
+	img:nth-child(2) {
+		opacity: 0;
+		animation: slideRightSection 1.5s forwards;
+	}
+
+	img:nth-child(3) {
+		opacity: 0;
+		animation: slideRightSection 1.5s forwards;
+		animation-delay: 0.3s;
+	}
+
+	.aboutus__box {
+		animation: slideLeftSection 1.5s forwards;
+	}
+}
+// end of aboutus images class for animation
+
+// custody styles
+.custody__styles {
+	.custody__name {
+		animation: slideDown 1s forwards;
+	}
+
+	.custody__container {
+		animation: slideDown 1s forwards;
+		animation-delay: 0.3s;
+
+		&:nth-child(2) {
+			animation-delay: 0.5s;
+		}
+
+		&:nth-child(3) {
+			animation-delay: 0.7s;
+		}
+	}
+}
+// end of custody styles
+
+// offers styles
+.offers__styles {
+	.offers__head {
+		animation: slideLeftSection 1.5s forwards;
+	}
+
+	.offers__body {
+		.offers__body--title {
+			animation: slideDown 1s forwards;
+		}
+
+		.offers__body--text {
+			animation: slideDown 1s forwards;
+			animation-delay: 0.2s;
+		}
+
+		.offers__body--services {
+			animation: slideDown 1s forwards;
+			animation-delay: 0.7s;
+		}
+
+		.offers__body--btn {
+			animation: slideDown 1s forwards;
+			animation-delay: 1.2s;
+		}
+	}
+}
+// end of offers styles
+
+// office section styles
+.office__styles {
+	overflow: hidden;
+
+	.office__head {
+		&--title {
+			animation: slideLeftSection 1.5s forwards;
+		}
+
+		&--text {
+			animation: slideRightSection 1.5s forwards;
+		}
+	}
+
+	.office__body {
+		&--img {
+			&:nth-child(2) {
+				animation: showScale 1.5s forwards;
+				animation-delay: 0.8s;
+			}
+
+			&:nth-child(3) {
+				animation: showScale 1.5s forwards;
+				animation-delay: 0.5s;
+			}
+
+			&:nth-child(4) {
+				animation: showScale 1.5s forwards;
+				animation-delay: 0.2s;
+			}
+
+			&:nth-child(5) {
+				animation: showScale 1.5s forwards;
+				animation-delay: 1.1s;
+			}
+		}
+	}
+
+	.office__card {
+		&:first-of-type {
+			animation: showScale 1.5s forwards;
+		}
+
+		&:last-of-type {
+			animation: showScale 1.5s forwards;
+			animation-delay: 1.3s;
+		}
+	}
+}
+// end of office section styles
+
+// findus card styles
+.findus__card-styles {
+	@media (min-width: 250px) and (max-width: 1200px) {
+		animation: cardLeftMobile 1s forwards;
+	}
+
+	@media (min-width: 1200px) {
+		animation: cardLeftDesktop 1s forwards;
+	}
+}
+// end of findus card styles
+
+// findus text styles
+.findus__top-styles {
+	animation: showScale 1s forwards;
+	animation-delay: 0.3s;
+}
+
+.findus__list-styles {
+	.findus__list--first {
+		animation: showScale 1s forwards;
+		animation-delay: 0.5s;
+	}
+
+	.findus__list--second {
+		animation: showScale 1s forwards;
+		animation-delay: 0.8s;
+	}
+
+	.findus__list--third {
+		animation: showScale 1s forwards;
+		animation-delay: 1s;
+	}
+}
+
+// end of findus text styles
+
+// findus paws class for animation
+.paws-walking {
+	.findus__paws--pair {
+		&:nth-child(2) {
+			svg:nth-child(1) {
+				animation: pawsWalking 0.35s forwards;
+				animation-delay: 2.2s;
+			}
+
+			svg:nth-child(2) {
+				animation: pawsWalking 0.35s forwards;
+				animation-delay: 2.6s;
+			}
+		}
+
+		&:nth-child(3) {
+			svg:nth-child(1) {
+				animation: pawsWalking 0.35s forwards;
+				animation-delay: 1.4s;
+			}
+
+			svg:nth-child(2) {
+				animation: pawsWalking 0.35s forwards;
+				animation-delay: 1.8s;
+			}
+		}
+
+		&:nth-child(4) {
+			svg:nth-child(1) {
+				animation: pawsWalking 0.35s forwards;
+				animation-delay: 0.6s;
+			}
+
+			svg:nth-child(2) {
+				animation: pawsWalking 0.35s forwards;
+				animation-delay: 1s;
+			}
+		}
+
+		&:nth-child(5) {
+			svg:nth-child(1) {
+				animation: pawsWalking 0.35s forwards;
+			}
+
+			svg:nth-child(2) {
+				animation: pawsWalking 0.3s forwards;
+				animation-delay: 0.3s;
+			}
+		}
+	}
+}
+// end of findus paws class for animation
+
+// services styles
+.services__styles {
+	.services__card {
+		&:nth-child(1) {
+			animation: showScale 1s forwards;
+		}
+
+		&:nth-child(2) {
+			animation: showScale 1s forwards;
+			animation-delay: 0.2s;
+		}
+
+		&:nth-child(3) {
+			animation: showScale 1s forwards;
+			animation-delay: 0.4s;
+		}
+
+		&:nth-child(4) {
+			animation: showScale 1s forwards;
+			animation-delay: 0.6s;
+		}
+
+		&:nth-child(5) {
+			animation: showScale 1s forwards;
+			animation-delay: 0.8s;
+		}
+
+		&:nth-child(6) {
+			animation: showScale 1s forwards;
+			animation-delay: 1s;
+		}
+
+		&:nth-child(7) {
+			animation: showScale 1s forwards;
+			animation-delay: 1.2s;
+		}
+
+		&:nth-child(8) {
+			animation: showScale 1s forwards;
+			animation-delay: 1.4s;
+		}
+
+		&:nth-child(9) {
+			animation: showScale 1s forwards;
+			animation-delay: 1.6s;
+		}
+
+		&:nth-child(10) {
+			animation: showScale 1s forwards;
+			animation-delay: 1.8s;
+		}
+	}
+}
+// end of services styles
+
+// crew styles
+.head__styles {
+	.head__title {
+		animation: textExpand 2s forwards;
+	}
+
+	.head__text {
+		animation: textExpand 2s forwards;
+	}
+}
+
+.meetus__card--styles {
+	animation: cardExpand 2s forwards;
+}
+
+.meetus__container--styles {
+	.meetus__container--title {
+		animation: slideDown 1s forwards;
+	}
+
+	.meetus__boxes {
+		.meetus__box {
+			&:nth-child(1) {
+				animation: slideDown 1s forwards;
+				animation-delay: 0.3s;
+			}
+
+			&:nth-child(2) {
+				animation: slideDown 1s forwards;
+			}
+
+			&:nth-child(3) {
+				animation: slideDown 1s forwards;
+				animation-delay: 0.6s;
+			}
+		}
+	}
+}
+
+.banner__styles {
+	.banner__container--title {
+		animation: slideDown 1.5s forwards;
+	}
+
+	.banner__container--btn {
+		animation: slideDown 1.5s forwards;
+		animation-delay: 0.3s;
+	}
+}
+// end of crew styles
+
+// visitus styles
+.visitus__styles {
+	.visitus__top {
+		img {
+			&:first-of-type {
+				animation: slideLeftSection 2.5s forwards;
+				animation-delay: 0.6s;
+			}
+
+			&:last-of-type {
+				animation: slideLeftSection 1.8s forwards;
+				animation-delay: 0.3s;
+			}
+		}
+
+		&--square {
+			&:first-of-type {
+				animation: slideLeftSection 1s forwards;
+			}
+
+			&:last-of-type {
+				animation: slideLeftSection 1.5s forwards;
+				animation-delay: 1.2s;
+			}
+		}
+	}
+
+	.visitus__bottom {
+		&--title {
+			animation: slideRightSection 1s forwards;
+		}
+
+		&--text {
+			animation: slideRightSection 1s forwards;
+			animation-delay: 0.3s;
+		}
+
+		&--hours {
+			animation: slideRightSection 1s forwards;
+			animation-delay: 0.6s;
+		}
+
+		&--btn {
+			animation: slideRightSection 1s forwards;
+			animation-delay: 1s;
+		}
+	}
+}
+// end of visitus styles
+
 // mobile button animation
 // front Animation
 @keyframes btnAnimation {
@@ -96,6 +469,100 @@
 }
 // end mobile button animation
 
+// main page animations
+
+// slide left & slide right animation
+@keyframes slideLeftSection {
+	0% {
+		opacity: 0;
+		transform: translate(-80%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes slideRightSection {
+	from {
+		opacity: 0;
+		transform: translate(50%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+// end of slide left & slide right animation
+
+// slide down animation
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(20%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+// end of slide down animation
+
+// show scale animation
+@keyframes showScale {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+// end of show scale animation
+
+// findus card animation
+@keyframes cardLeftMobile {
+	from {
+		top: 10%;
+		opacity: 0;
+	}
+
+	to {
+		top: -5%;
+		opacity: 1;
+	}
+}
+
+@keyframes cardLeftDesktop {
+	from {
+		top: 5%;
+		opacity: 0;
+	}
+
+	to {
+		top: -15%;
+		opacity: 1;
+	}
+}
+// end of findus card animation
+
+// findus paws animation
+@keyframes pawsWalking {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+// end of findus paws animation
+
+// end of main page animations
+
 // services subpage animations
 // bar animation
 @keyframes slideLeft {
@@ -117,3 +584,29 @@
 }
 // end of bar animation
 // end of services subpage animations
+
+// crew subpage animations
+@keyframes cardExpand {
+	from {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes textExpand {
+	from {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+// end of crew subpage animations
