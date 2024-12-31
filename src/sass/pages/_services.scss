@@ -42,6 +42,11 @@
 			right: 5px;
 			width: 130px;
 		}
+
+		span {
+			display: inline-block;
+			color: colors.$extra-color;
+		}
 	}
 }
 

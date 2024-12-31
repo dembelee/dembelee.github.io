@@ -31,6 +31,8 @@ const observerFunction = (animationClass, classStyles) => {
 const observerAnimations = () => {
 	const servicesSite = '/services.html'
 	const crewSite = '/crew.html'
+	const body = document.querySelector('body')
+	body.style.overflowX = 'hidden'
 
 	if (window.location.pathname === '/') {
 		// main site animations

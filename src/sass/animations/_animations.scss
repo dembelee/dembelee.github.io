@@ -34,8 +34,6 @@
 
 // aboutus images class for animation
 .elements-slide {
-	overflow: hidden;
-
 	img:nth-child(1) {
 		opacity: 0;
 		animation: slideLeftSection 1.5s forwards;
@@ -110,8 +108,6 @@
 
 // office section styles
 .office__styles {
-	overflow: hidden;
-
 	.office__head {
 		&--title {
 			animation: slideLeftSection 1.5s forwards;
@@ -307,11 +303,11 @@
 // crew styles
 .head__styles {
 	.head__title {
-		animation: textExpand 2s forwards;
+		animation: textExpand 1s forwards;
 	}
 
 	.head__text {
-		animation: textExpand 2s forwards;
+		animation: textExpand 1s forwards;
 	}
 }
 
