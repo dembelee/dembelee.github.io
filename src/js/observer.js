@@ -36,10 +36,28 @@ const observerAnimations = () => {
 
 	if (window.location.pathname === '/') {
 		// main site animations
-		observerFunction('elements-slide', '.elements-styles')
-		observerFunction('custody__styles', '.custody')
-		observerFunction('offers__styles', '.offers__container')
+		// aboutus section
+		observerFunction('aboutus__animation-first', '.aboutus__first')
+		observerFunction('aboutus__animation-second', '.aboutus__second')
+		observerFunction('aboutus__animation-third', '.aboutus__third')
+		observerFunction('aboutus__box-styles', '.aboutus__box')
+		// end of aboutus section
+		// custody section
+		observerFunction('custody__name-styles', '.custody__name')
+		observerFunction('custody__container-first-styles', '.custody__container-first')
+		observerFunction('custody__container-second-styles', '.custody__container-second')
+		observerFunction('custody__container-third-styles', '.custody__container-third')
+		// end of custody section
+		// offers section
+		observerFunction('offers__head-styles', '.offers__head')
+		observerFunction('offers__body--title-styles', '.offers__body--title')
+		observerFunction('offers__body--text-styles', '.offers__body--text')
+		observerFunction('offers__body--services-styles', '.offers__body--services')
+		observerFunction('offers__body--btn-styles', '.offers__body--btn')
+		// end of offers section
+		// office section
 		observerFunction('office__styles', '.office')
+		// end of office section
 		observerFunction('findus__card-styles', '.findus__card')
 		observerFunction('paws-walking', '.findus__paws')
 		footerElementsAnimations()

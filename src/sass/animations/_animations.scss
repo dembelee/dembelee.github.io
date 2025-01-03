@@ -33,77 +33,74 @@
 // end btn animation styles
 
 // aboutus images class for animation
-.elements-slide {
-	img:nth-child(1) {
-		opacity: 0;
-		animation: slideLeftSection 1.5s forwards;
-	}
 
-	img:nth-child(2) {
-		opacity: 0;
-		animation: slideRightSection 1.5s forwards;
-	}
-
-	img:nth-child(3) {
-		opacity: 0;
-		animation: slideRightSection 1.5s forwards;
-		animation-delay: 0.3s;
-	}
-
-	.aboutus__box {
-		animation: slideLeftSection 1.5s forwards;
-	}
+.aboutus__animation-first {
+	opacity: 0;
+	animation: slideLeftSection 1.5s forwards;
 }
+
+.aboutus__animation-second {
+	opacity: 0;
+	animation: slideRightSection 1.5s forwards;
+}
+
+.aboutus__animation-third {
+	opacity: 0;
+	animation: slideRightSection 1.5s forwards;
+	animation-delay: 0.3s;
+}
+
+.aboutus__box-styles {
+	animation: slideLeftSection 1.5s forwards;
+}
+
 // end of aboutus images class for animation
 
 // custody styles
-.custody__styles {
-	.custody__name {
-		animation: slideDown 1s forwards;
-	}
+.custody__name-styles {
+	animation: slideDown 1s forwards;
+}
 
-	.custody__container {
-		animation: slideDown 1s forwards;
-		animation-delay: 0.3s;
+.custody__container-first-styles {
+	animation: slideDown 1s forwards;
+	animation-delay: 0.1s;
+}
 
-		&:nth-child(2) {
-			animation-delay: 0.5s;
-		}
+.custody__container-second-styles {
+	animation: slideDown 1s forwards;
+	animation-delay: 0.3s;
+}
 
-		&:nth-child(3) {
-			animation-delay: 0.7s;
-		}
-	}
+.custody__container-third-styles {
+	animation: slideDown 1s forwards;
+	animation-delay: 0.4s;
 }
 // end of custody styles
 
 // offers styles
-.offers__styles {
-	.offers__head {
-		animation: slideLeftSection 1.5s forwards;
-	}
-
-	.offers__body {
-		.offers__body--title {
-			animation: slideDown 1s forwards;
-		}
-
-		.offers__body--text {
-			animation: slideDown 1s forwards;
-			animation-delay: 0.2s;
-		}
-
-		.offers__body--services {
-			animation: slideDown 1s forwards;
-			animation-delay: 0.7s;
-		}
-
-		.offers__body--btn {
-			animation: slideDown 1s forwards;
-			animation-delay: 1.2s;
-		}
-	}
+.offers__head-styles {
+	animation: slideLeftSection 1.5s forwards;
 }
+
+.offers__body--title-styles {
+	animation: slideDown 1s forwards;
+}
+
+.offers__body--text-styles {
+	animation: slideDown 1s forwards;
+	animation-delay: 0.2s;
+}
+
+.offers__body--services-styles {
+	animation: slideDown 1s forwards;
+	animation-delay: 0.7s;
+}
+
+.offers__body--btn-styles {
+	animation: slideDown 1s forwards;
+	animation-delay: 1.2s;
+}
+
 // end of offers styles
 
 // office section styles
@@ -157,8 +154,12 @@
 
 // findus card styles
 .findus__card-styles {
-	@media (min-width: 250px) and (max-width: 1200px) {
+	@media (min-width: 250px) and (max-width: 767px) {
 		animation: cardLeftMobile 1s forwards;
+	}
+
+	@media (min-width: 768px) and (max-width: 1199px) {
+		animation: cardLeftTablet 1s forwards;
 	}
 
 	@media (min-width: 1200px) {
@@ -528,6 +529,18 @@
 
 	to {
 		top: -5%;
+		opacity: 1;
+	}
+}
+
+@keyframes cardLeftTablet {
+	from {
+		top: 10%;
+		opacity: 0;
+	}
+
+	to {
+		top: -8%;
 		opacity: 1;
 	}
 }
