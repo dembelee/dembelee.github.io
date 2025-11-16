@@ -46,6 +46,7 @@ const handleNav = () => {
 	if (top > 0) {
 		navMobile.classList.add('nav-handle')
 		navDesktop.classList.add('nav-handle')
+		
 	} else if (top === 0) {
 		navMobile.classList.remove('nav-handle')
 		navDesktop.classList.remove('nav-handle')

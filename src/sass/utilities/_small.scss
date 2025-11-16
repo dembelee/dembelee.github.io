@@ -291,7 +291,7 @@
 		&__img {
 			display: block;
 			position: absolute;
-			top: 60%;
+			top: 62%;
 			left: 70%;
 			width: 1300px;
 			transform: translate(-50%, -50%);
@@ -378,6 +378,7 @@
 		// custody section styles
 		.custody {
 			padding: 0 3em;
+			padding-top: 4em;
 			padding-bottom: 6em;
 
 			&__title {
@@ -449,6 +450,24 @@
 			}
 		}
 		// end of offers section styles
+
+		// reviews section styles
+		.reviews {
+			padding-top: 4em;
+
+			&__container {
+				align-items: inherit;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			&__box {
+				justify-content: flex-start;
+				margin: 1em;
+				width: 47%;
+			}
+		}
+		// reviews section styles
 
 		// office section styles
 		.office {
@@ -1032,6 +1051,12 @@
 		}
 		// end of visitus section styles
 		// end of services subpage media
+
+		// privacy subpage styles
+		.caption {
+			padding-top: 12em;
+		}
+		// end of privacy subpage styles
 	}
 	// end of main
 

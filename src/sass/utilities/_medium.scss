@@ -142,6 +142,15 @@
 		}
 		// end of offers section styles
 
+		// reviews section styles
+		.reviews {
+			&__box {
+				width: 40%;
+				max-width: 400px;
+			}
+		}
+		// reviews section styles
+
 		// office section styles
 		.office {
 			padding: 4em 6em;

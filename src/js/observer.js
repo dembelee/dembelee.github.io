@@ -29,12 +29,18 @@ const observerFunction = (animationClass, classStyles) => {
 }
 
 const observerAnimations = () => {
+	// variables
+	const aboutusSection = document.querySelector('.aboutus')
+	const officeSection = document.querySelector('.office')
 	const servicesSite = '/services.html'
 	const crewSite = '/crew.html'
-	const body = document.querySelector('body')
-	body.style.overflowX = 'hidden'
+	const privacySite = '/privacy.html'
 
 	if (window.location.pathname === '/') {
+		// styles
+		aboutusSection.style.overflow = 'hidden'
+		officeSection.style.overflow = 'hidden'
+
 		// main site animations
 		// aboutus section
 		observerFunction('aboutus__animation-first', '.aboutus__first')
@@ -64,9 +70,14 @@ const observerAnimations = () => {
 	} else if (window.location.pathname === servicesSite) {
 		// services site animations
 		observerFunction('head__styles', '.head')
-		observerFunction('services__styles', '.services__cards')
 		observerFunction('visitus__styles', '.visitus__container')
+		if (window.innerWidth >= 0 && window.innerWidth <= 1199) {
+			loopServicesCards()
+		} else {
+			observerFunction('services__styles', '.services__cards')
+		}
 		footerElementsAnimations()
+		// if (window.innerWidth >= 0 && window.innerWidth <= 1200) {}
 	} else if (window.location.pathname === crewSite) {
 		// crew site animations
 		observerFunction('head__styles', '.head')
@@ -74,12 +85,21 @@ const observerAnimations = () => {
 		observerFunction('meetus__container--styles', '.meetus__container')
 		observerFunction('banner__styles', '.banner')
 		footerElementsAnimations()
+	} else if (window.location.pathname === privacySite) {
+		// privacy site animations
+		footerElementsAnimations()
 	}
 }
 
 const footerElementsAnimations = () => {
 	observerFunction('findus__top-styles', '.findus__box')
 	observerFunction('findus__list-styles', '.findus__list')
+}
+
+const loopServicesCards = () => {
+	for (n = 1; n < 11; n++) {
+		setTimeout(observerFunction(`card__animation`, `.card-styles-${n}`), 500)
+	}
 }
 
 observerAnimations()

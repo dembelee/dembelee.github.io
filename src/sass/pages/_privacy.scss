@@ -1,0 +1,80 @@
+@use '../colors/colors';
+
+.caption {
+	padding: 2em;
+	padding-top: 8em;
+	color: colors.$privacy-title;
+
+	.wrapper {
+		max-width: 1000px;
+	}
+
+	&__title {
+		font-size: 3.5rem;
+	}
+
+	&__update {
+		margin: 0.6em 0;
+		font-size: 1.5rem;
+		color: colors.$privacy-update;
+	}
+
+	&__description {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+}
+
+.privacy {
+	padding: 2em;
+	background: colors.$white-color;
+	color: colors.$spare-color;
+
+	.wrapper {
+		max-width: 1000px;
+	}
+
+	.point {
+		margin-top: 3em;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		&__title {
+			margin-bottom: 1em;
+			font-size: 2.5rem;
+		}
+
+		article {
+			ol {
+				padding-left: 2em;
+
+				li {
+					ul {
+						padding: 2em;
+
+						li {
+							a {
+								color: colors.$spare-color;
+								text-decoration: none;
+								font-weight: bold;
+
+								&:hover,
+								&:active {
+									text-decoration: underline;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			li,
+			p {
+				margin-bottom: 1em;
+				font-size: 1.5rem;
+			}
+		}
+	}
+}

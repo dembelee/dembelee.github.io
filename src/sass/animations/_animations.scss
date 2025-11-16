@@ -93,12 +93,12 @@
 
 .offers__body--services-styles {
 	animation: slideDown 1s forwards;
-	animation-delay: 0.7s;
+	animation-delay: 0.6s;
 }
 
 .offers__body--btn-styles {
 	animation: slideDown 1s forwards;
-	animation-delay: 1.2s;
+	animation-delay: 0.7s;
 }
 
 // end of offers styles
@@ -298,6 +298,10 @@
 			animation-delay: 1.8s;
 		}
 	}
+}
+
+.card__animation {
+	animation: showScale 1s forwards;
 }
 // end of services styles
 

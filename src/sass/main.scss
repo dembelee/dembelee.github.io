@@ -201,7 +201,7 @@ button {
 		&--underline {
 			position: absolute;
 			bottom: -70px;
-			right: 5%;
+			right: 0;
 			width: 300px;
 			transform: translateY(-50%);
 		}
@@ -369,6 +369,7 @@ button {
 	// custody section styles
 	.custody {
 		padding: 0 3em;
+		padding-top: 2em;
 		background: colors.$white-color;
 
 		&__name {
@@ -451,6 +452,7 @@ button {
 	// offers section styles
 	.offers {
 		padding: 4em 2em;
+		padding-bottom: 10em;
 		background: colors.$white-color;
 
 		&__head {
@@ -540,6 +542,129 @@ button {
 		}
 	}
 	// end offers section styles
+
+	// reviews section styles
+	.reviews {
+		padding: 2em;
+		padding-top: 0;
+		padding-bottom: 6em;
+		background: colors.$white-color;
+
+		&__container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		&__box {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			flex-direction: column;
+			position: relative;
+			margin: 1em 0;
+			padding: 2em;
+			padding-bottom: 4em;
+			border-radius: 10px;
+			background: colors.$reviews-card;
+			overflow: hidden;
+
+			&--svg {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 1em;
+				padding: 1em;
+				border-radius: 50%;
+				background: colors.$white-color;
+				z-index: 1;
+
+				svg {
+					height: 25px;
+					width: 25px;
+
+					path {
+						fill: colors.$main-color;
+					}
+				}
+			}
+
+			&--top {
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: 1.5em;
+			}
+
+			&--info {
+				display: flex;
+				flex-direction: column;
+			}
+
+			&--name {
+				font-size: 1.7rem;
+				font-weight: bold;
+			}
+
+			&--profession {
+				margin: 0 auto;
+				font-size: 1.2rem;
+				color: colors.$profession-color;
+			}
+
+			&--bottom {
+				position: relative;
+				z-index: 2;
+
+				p {
+					font-size: 1.4rem;
+					font-weight: 400;
+					color: colors.$description-color;
+				}
+			}
+
+			&--decoration {
+				position: absolute;
+				bottom: -5%;
+				right: 0;
+				z-index: 0;
+
+				svg {
+					width: 100px;
+					transform: rotate(15deg);
+
+					path {
+						fill: colors.$svg-color;
+					}
+				}
+			}
+
+			&:nth-child(odd) {
+				.reviews__box--svg {
+					svg {
+						path {
+							fill: colors.$icon-pink;
+						}
+					}
+				}
+			}
+
+			&:nth-child(3),
+			&:nth-child(5),
+			&:nth-child(9) {
+				.reviews__box--svg {
+					svg {
+						path {
+							fill: colors.$icon-blue;
+						}
+					}
+				}
+			}
+		}
+	}
+	// reviews section styles
 
 	// office section styles
 	.office {
@@ -973,6 +1098,34 @@ button {
 	// services subpage styles
 	@import './pages/services';
 	// end of services subpage styles
+
+	// services subpage styles
+	@import './pages/privacy';
+	// end of services subpage styles
+
+	// bar MAIN PAGE styles
+	.bar__main {
+		background: colors.$white-color;
+
+		.bar__box--text {
+			color: colors.$spare-color;
+			font-weight: 550;
+		}
+
+		.bar__box--long {
+			width: 182px;
+		}
+
+		.bar__box--icon {
+			svg {
+				path {
+					fill: colors.$spare-color;
+				}
+			}
+		}
+	}
+
+	// bar MAIN PAGE styles
 }
 // end of main
 
