@@ -1124,7 +1124,6 @@ button {
 			}
 		}
 	}
-
 	// bar MAIN PAGE styles
 }
 // end of main
@@ -1151,6 +1150,10 @@ button {
 	}
 }
 // end of footer
+
+.social-share {
+	display: none;
+}
 
 @import './utilities/small';
 @import './utilities/medium';

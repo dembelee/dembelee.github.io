@@ -668,6 +668,8 @@
 
 		// custody section styles
 		.custody {
+			padding: 6em 2em;
+
 			&__title {
 				margin-bottom: 2em;
 				font-size: 4.8rem;
@@ -733,6 +735,12 @@
 			}
 		}
 		// end of offers section styles
+
+		// reviews section styles
+		.reviews {
+			padding: 8em 4em;
+		}
+		// reviews section styles
 
 		// office section styles
 		.office {
